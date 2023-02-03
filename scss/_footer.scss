@@ -1,6 +1,117 @@
-footer{
+footer {
   background-color: $brand-blue;
-  nav{
-    @include flex (row, center,space-between);
+  padding-top: 4.9rem;
+  .top {
+    @include flex(row, center, space-between);
+    border-bottom: 0.1rem solid rgba(73, 196, 253, 0.2);
+    padding-bottom: 4.8rem;
+    margin-bottom: 5.7rem;
+    .share {
+      display: flex;
+      align-items: center;
+      span{
+        font-size: 1.4rem;
+        line-height: 125%;
+        color: #ffffff;
+        opacity: 0.7;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+        li {
+          &:not(:first-child) {
+            margin-left: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .main{
+     @include flex(row, flex-start, space-between);
+     border-bottom: 1px solid rgba(73,196,253,0.2);
+     padding-bottom: 6.2rem;
+     margin-bottom: 3.9rem;
+     nav{
+      @include flex(row, flex-start, space-between);
+      width: 100%;
+      max-width: 86rem;
+      .item{
+        strong{
+          display: inline-block;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 600;
+          font-size: 1.6rem;
+          line-height: 125%;
+          color: #ffffff;
+          margin-bottom: 2.5rem;
+        }
+        ul{
+          li{
+            &:not(:last-child){
+              margin-bottom:2.9rem ;
+            }
+            a{
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+              color: white;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+     }
+     .btns{
+      width: 100%;
+      max-width: 28rem;
+      button{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 7.6rem;
+        background-color:rgba(0,164,240,0.23) ;
+        border-radius: 0.6rem;
+        padding-left: 2.4rem;
+        &:not(:last-child){
+          margin-bottom:2.4rem ;
+        }
+        .info{
+          margin-left: 2.4rem;
+          strong{
+            display: block;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: #ffffff;
+          }
+          span{
+            display: block;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: #ffffff;
+          }
+        }
+      }
+     }
+  }
+  .msg{
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 0.4rem solid $brand-yellow;
+    padding-bottom: 3.4rem;
+    .icon{
+      font-size: 1.8rem;
+    }
+    p{
+      width: 100%;
+      max-width:66rem ;
+      margin-left: 2.5rem;
+      font-size: 14px;
+      line-height: 150%;
+      color: white;
+      opacity: 0.8;
+
+    }
   }
 }
