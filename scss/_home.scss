@@ -70,16 +70,181 @@
       .card-front {
         top: 4.1rem;
         left: 0;
-        z-index: 2;
+        z-index: 3;
+        max-width: 43.5rem;
       }
       .card-back {
         bottom: 4.6rem;
         right: 8.6rem;
         z-index: 2;
+        max-width: 35.2rem;
       }
       .circle {
         top: 2.8rem;
         right: 4.6rem;
+        max-width: 55.3rem;
+        z-index: 1;
+      }
+    }
+  }
+  @include responsive(1440px) {
+    .area-image {
+      margin-right: -13.4rem;
+    }
+  }
+  @include responsive(1366px) {
+    .area-image {
+      margin-right: 8rem;
+      .image {
+        .card-back {
+          right: -4rem;
+        }
+        .circle {
+          right: -3rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(1050px) {
+    padding-top: 14.5rem;
+    height: 65.6rem;
+    .area-image {
+      h2 {
+        margin-bottom: 1.5rem;
+      }
+      .image {
+        height: 45rem;
+        .card-front {
+          max-width: 35rem;
+          left: 1rem;
+        }
+        .card-back {
+          max-width: 29rem;
+          right: -3rem;
+          bottom: 0;
+        }
+        .circle {
+          max-width: 46rem;
+          right: 1rem;
+        }
+      }
+    }
+    .text {
+      ul {
+        margin-top: 4.5rem;
+        li {
+          span {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    height: 89.1rem;
+    background-size: cover;
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .text {
+      @include flex(column, center, center);
+      margin-bottom: 5rem;
+      max-width: 68.5rem;
+      h3 {
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 2.6rem;
+      }
+      ul {
+        margin-top: 3.9rem;
+      }
+    }
+    .area-image {
+      h2 {
+        margin-bottom: 1.9rem;
+      }
+      .image {
+        max-width: 55.1rem;
+        margin: 0 auto;
+        height: 42.4rem;
+        top: 0;
+        .circle {
+          max-width: 429px;
+          top: 0.5rem;
+          right: 0.5rem;
+        }
+        .card-front {
+          max-width: 35rem;
+          left: 7rem;
+        }
+        .card-back {
+          max-width: 27.4rem;
+          right: 1rem;
+          bottom: 1.5rem;
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    padding-top: 12.4rem;
+    height: 73.9rem;
+    .text {
+      h3 {
+        font-size: 1.6rem;
+        line-height: 120%;
+        margin-bottom: 1.5rem;
+      }
+      h1 {
+        font-size: 3.2rem;
+        line-height: 112%;
+        margin-bottom: 3.7rem;
+      }
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 27.5rem;
+        li {
+          &:not(:last-child) {
+            margin-bottom: 1.7rem;
+          }
+          .icon {
+            width: 2rem;
+            height: auto;
+            background-color: transparent;
+          }
+          span {
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .area-image {
+      h2 {
+        display: none;
+      }
+      .image {
+        max-width: 30.5rem;
+        height: 24.8rem;
+        .card-front {
+          max-width: 21.1rem;
+          top: 2.9rem;
+          left: 31px;
+        }
+        .card-back {
+          max-width: 17rem;
+          bottom: 1px;
+          right: -26px;
+        }
+        .circle {
+          max-width: 26.7rem;
+          right: -21px;
+        }
       }
     }
   }
@@ -349,9 +514,9 @@
       &.mockup-01 {
         bottom: 4.7rem;
       }
-      &.mockup-02{
+      &.mockup-02 {
         top: 0.3rem;
-        left:25.8rem ;
+        left: 25.8rem;
       }
       &.circle {
         right: 0;
