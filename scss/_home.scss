@@ -522,16 +522,19 @@
   @include responsive(480px) {
     position: relative;
     padding-top: 8.6rem;
-    &:after{
+    &:after {
       position: absolute;
-      content:"" ;
+      content: "";
       width: 100px;
       height: 214px;
-      background: linear-gradient(180deg,#f7f7fa 0% rgba(247,247,250,0)100%);
+      background: linear-gradient(
+        180deg,
+        #f7f7fa 0% rgba(247, 247, 250, 0) 100%
+      );
       bottom: 0;
       left: 0;
       z-index: -1;
-      transform: matrix(1,0,0,-1,0,0);
+      transform: matrix(1, 0, 0, -1, 0, 0);
     }
     .right-area {
       margin-bottom: -1.2rem;
@@ -592,13 +595,13 @@
             display: none;
           }
         }
-        .info-txt{
-          h3{
+        .info-txt {
+          h3 {
             margin-top: 1.6rem;
           }
         }
       }
-      .ilustra-mockup{
+      .ilustra-mockup {
         height: 397px;
         overflow: hidden;
       }
@@ -640,6 +643,53 @@
   }
   .slide-depoimentos {
     overflow: hidden;
+  }
+  @include responsive(1280px) {
+    .top {
+      .sliderPaginationDepoimento {
+      max-width: 9rem;
+    }
+    }
+
+  }
+  @include responsive(1050px) {
+  }
+  @include responsive(991px) {
+    padding-top: 8rem;
+    .top {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 5.1rem;
+      h2 {
+        text-align: center;
+        margin-bottom: 5.1rem;
+      }
+    }
+  }
+  @include responsive(600px) {
+  }
+  @include responsive(480px) {
+    padding-top: 7.6rem;
+    .container {
+      padding: 0;
+    }
+    .top {
+      h2 {
+        max-width: 28.5rem;
+        font-size: 2.8rem;
+        font-weight: 600;
+        margin-bottom: 3.4rem;
+        span {
+          margin-top: 1.1rem;
+        }
+      }
+      .sliderPaginationDepoimento {
+        max-width: 9rem;
+      }
+    }
+    .slide-depoimentos {
+      padding: 0rem 2rem;
+    }
   }
 }
 
