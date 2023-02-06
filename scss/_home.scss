@@ -520,7 +520,19 @@
     }
   }
   @include responsive(480px) {
+    position: relative;
     padding-top: 8.6rem;
+    &:after{
+      position: absolute;
+      content:"" ;
+      width: 100px;
+      height: 214px;
+      background: linear-gradient(180deg,#f7f7fa 0% rgba(247,247,250,0)100%);
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      transform: matrix(1,0,0,-1,0,0);
+    }
     .right-area {
       margin-bottom: -1.2rem;
       .main-text {
@@ -585,6 +597,10 @@
             margin-top: 1.6rem;
           }
         }
+      }
+      .ilustra-mockup{
+        height: 397px;
+        overflow: hidden;
       }
     }
   }
