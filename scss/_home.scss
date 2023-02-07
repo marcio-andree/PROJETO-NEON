@@ -752,14 +752,17 @@
       position: absolute;
       &.mockup-01 {
         bottom: 4.7rem;
+        z-index: 3;
       }
       &.mockup-02 {
         top: 0.3rem;
         left: 25.8rem;
+        z-index: 3;
       }
       &.circle {
         right: 0;
         bottom: 0;
+        z-index: 2;
       }
     }
   }
@@ -797,10 +800,11 @@
         &.mockup-01 {
           z-index: 2;
           left: -10.1rem;
+          z-index: 3;
         }
         &.mockup-02 {
           left: 15.8rem;
-          z-index: 2;
+          z-index: 3;
         }
         &.circle {
           width: 100%;
@@ -860,11 +864,13 @@
           bottom: initial;
           top: 5.8rem;
           left: -13.1rem;
+          z-index: 3;
         }
         &.mockup-02 {
           max-width: 16.6rem;
           top: 0;
           left: 5.8rem;
+          z-index: 3;
         }
       }
     }
