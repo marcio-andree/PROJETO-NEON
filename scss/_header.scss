@@ -10,6 +10,43 @@ header {
   .container {
     @include flex(row, center, space-between);
   }
+    .logo {
+    display: inline-block;
+    width: 13.2rem;
+    height: 3rem;
+    background: url("../assets/img/logo.svg") no-repeat center center;
+    background-size: 100%;
+    transition: background-image 0.3s;
+  }
+   &.fixed-menu {
+    position: fixed;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.08);
+
+    .logo {
+      background-image: url("../assets/img/logo-neon-azul.svg");
+    }
+    nav {
+      ul {
+        li {
+          a {
+            color: #5f5c6b;
+            &:hover {
+              color: #00a5f0;
+            }
+          }
+        }
+      }
+      .btn-secondary {
+        color: #00a5f0;
+        border: 1px solid #00a5f0;
+        &:hover {
+          background-color: #00a5f0;
+          color: #ffffff;
+        }
+      }
+    }
+  }
   nav {
     position: relative;
     display: flex;
@@ -28,6 +65,7 @@ header {
       transition: opacity .3s;
       transform: translateY(2rem);
       transition: all .3s;
+      border: 0.5px solid rgba(0, 0, 0, 0.096);
       &.active{
         opacity: 1;
         pointer-events: all;
