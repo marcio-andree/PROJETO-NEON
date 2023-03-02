@@ -1,45 +1,57 @@
+// Swiper library
 
-    // Swiper library
-
-    var swiper = new Swiper(".slide-depoimentos", {
+var swiper = new Swiper(".slide-depoimentos", {
+  slidesPerView: 3,
+  spaceBetween: 32,
+  pagination: {
+    el: ".sliderPaginationDepoimento",
+    clickable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1.3,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 2.3,
+      spaceBetween: 15,
+    },
+    1200: {
       slidesPerView: 3,
       spaceBetween: 32,
-      pagination: {
-        el: ".sliderPaginationDepoimento",
-        clickable: true,
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1.3,
-          spaceBetween: 16,
-        },
-        600: {
-          slidesPerView: 2.3,
-          spaceBetween: 15,
-        },
-        1200: {
-          slidesPerView: 3,
-          spaceBetween: 32,
-        },
-      },
-    });
-    AOS.init({
-      duration:1000,
-      once:true
-    });
+    },
+  },
+});
+AOS.init({
+  duration: 1000,
+  once: true,
+});
 
+const btnDropdown = document.querySelector(".js-btn-dropdown");
 
+const dropdown = document.querySelector(".js-dropdown");
 
-    const btnDropdown = document.querySelector('.js-btn-dropdown');
+function openDropdown(event) {
+  event.preventDefault();
 
-    const dropdown = document.querySelector('.js-dropdown');
+  dropdown.classList.toggle("active");
+}
 
-    function openDropdown(event){
-      event.preventDefault();
+btnDropdown.addEventListener("click", openDropdown);
 
-      dropdown.classList.toggle('active')
-    }
+dropdown.addEventListener("mouseleave", openDropdown);
 
-    btnDropdown.addEventListener('click', openDropdown);
+// fixed menu
 
-    dropdown.addEventListener('mouseleave', openDropdown);
+const fixedHeader = document.getElementById("js-header");
+console.log(fixedHeader);
+
+function fixedMenu() {
+  if (window.scrollY > 80) {
+    fixedHeader.classList.add("fixed-menu");
+  } else {
+    fixedHeader.classList.remove("fixed-menu");
+  }
+}
+
+document.addEventListener("scroll", fixedMenu);
