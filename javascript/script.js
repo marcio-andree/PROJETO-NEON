@@ -54,7 +54,7 @@ function fixedMenu() {
     fixedHeader.classList.remove("fixed-menu");
   }
 }
-
+  // action function
 document.addEventListener("scroll", fixedMenu);
 
 
@@ -68,6 +68,6 @@ document.addEventListener("scroll", fixedMenu);
   document.documentElement.classList.toggle('menu-opened')
  }
 
-
+  // action function
  bntMenu.addEventListener('click', openMenuMobile);
  overlayMenu.addEventListener("click", openMenuMobile);
