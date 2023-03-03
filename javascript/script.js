@@ -27,6 +27,7 @@ AOS.init({
   once: true,
 });
 
+// menu dropdown
 const btnDropdown = document.querySelector(".js-btn-dropdown");
 
 const dropdown = document.querySelector(".js-dropdown");
@@ -44,7 +45,7 @@ dropdown.addEventListener("mouseleave", openDropdown);
 // fixed menu
 
 const fixedHeader = document.getElementById("js-header");
-console.log(fixedHeader);
+
 
 function fixedMenu() {
   if (window.scrollY > 80) {
@@ -55,3 +56,18 @@ function fixedMenu() {
 }
 
 document.addEventListener("scroll", fixedMenu);
+
+
+  // Dropdown
+
+ const bntMenu = document.querySelector("#js-btn-menu-mobile");
+ const overlayMenu = document.querySelector(".js-overlay");
+
+  // function open and close menu mobile
+ function openMenuMobile(){
+  document.documentElement.classList.toggle('menu-opened')
+ }
+
+
+ bntMenu.addEventListener('click', openMenuMobile);
+ overlayMenu.addEventListener("click", openMenuMobile);
